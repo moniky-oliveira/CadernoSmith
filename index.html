@@ -14,6 +14,8 @@
     <aside>
 
         <h2>Sumário</h2>
+        
+        <a href="#inicio">Apresentação</a>
 
         <a href="#investigacao">Investigação Inicial</a>
 
@@ -36,6 +38,30 @@
     </aside>
 
     <main>
+
+<section id="inicio">
+
+    <h1>Números de Smith</h1>
+
+    <h2>Explorando relações e padrões numéricos</h2>
+
+    <p>
+        Este caderno interativo foi desenvolvido como produto educacional da dissertação de mestrado do Programa de Mestrado Profissional em Matemática em Rede Nacional (PROFMAT), da Universidade Tecnológica Federal do Paraná (UTFPR), elaborada por Moniky Oliveira, sob a orientação do Prof. Dr. Ronie Peterson Dario.
+    </p>
+
+    <p>
+        Seu objetivo é proporcionar uma investigação dinâmica sobre os números de Smith, combinando aspectos históricos, conceitos matemáticos, exemplos resolvidos, atividades interativas e desafios que incentivam a exploração de relações e padrões numéricos.
+    </p>
+
+    <p>
+        Ao longo deste material, você será convidado a formular conjecturas, testar ideias, analisar exemplos e construir seu conhecimento por meio da experimentação e da resolução de problemas. Espera-se que este caderno contribua para tornar o estudo da Teoria dos Números mais acessível, investigativo e significativo, despertando o interesse pela descoberta de novas propriedades matemáticas.
+    </p>
+
+    <p style="text-align:center; text-indent:0; margin-top:40px;">
+        <strong>Bom estudo!</strong>
+    </p>
+
+</section>      
 
 <section id="investigacao">
 
@@ -81,13 +107,11 @@
 
     <h1>História dos Números de Smith</h1>
 
-    <div class="card">
-
         <p>
             Na Matemática, muitas descobertas começaram justamente com uma simples observação do cotidiano.
             Um exemplo disso ocorreu em 1982, quando o matemático canadense-americano
-            <strong>Albert Wilansky</strong> observou o número de telefone de seu cunhado,
-            Harold Smith: <strong>493-7775</strong>.
+            Albert Wilansky observou o número de telefone de seu cunhado,
+            Harold Smith: 493-7775.
             Ele notou que, ao fatorar esse número, a soma dos algarismos do número era igual à
             soma dos algarismos de seus fatores primos.
         </p>
@@ -101,15 +125,11 @@
             Harold Smith. Essa observação deu origem ao estudo dessa classe especial de números.
         </p>
 
-    </div>
-
 </section>
 
 <section id="video">
 
     <h1>Vídeo</h1>
-
-    <div class="card">
 
         <p>
             Assista ao vídeo para conhecer a história dos Números de Smith e compreender como essa curiosa propriedade foi descoberta.
@@ -123,29 +143,707 @@
 
 </video>
 
+</section>
+
+<section id="basicos">
+
+    <h1>Exercícios Básicos</h1>
+
+    <p>
+        Complete as etapas abaixo para investigar se o número apresentado é um número de Smith.
+        Preencha a fatoração prima, calcule as somas dos algarismos e, ao final, registre sua conclusão.
+    </p>
+
+<div class="card-exercicio" id="card378">
+
+    <h2>Número 378</h2>
+
+    <h3></h3>
+
+    <div class="linha">
+
+        <input id="f1" maxlength="1">
+
+        <span>×</span>
+
+        <input id="f2" maxlength="1">
+
+        <span>×</span>
+
+        <input id="f3" maxlength="1">
+
+        <span>×</span>
+
+        <input id="f4" maxlength="1">
+
+        <span>×</span>
+
+        <input id="f5" maxlength="1">
+
     </div>
+
+    <h3>Soma dos algarismos dos fatores</h3>
+
+    <div class="linha">
+
+        <input id="d1" maxlength="1">
+
+        <span>+</span>
+
+        <input id="d2" maxlength="1">
+
+        <span>+</span>
+
+        <input id="d3" maxlength="1">
+
+        <span>+</span>
+
+        <input id="d4" maxlength="1">
+
+        <span>+</span>
+
+        <input id="d5" maxlength="1">
+
+        <span>=</span>
+
+        <input id="soma1" maxlength="2">
+
+    </div>
+
+    <h3>Soma dos algarismos do número</h3>
+
+    <div class="linha">
+
+        <input id="n1" maxlength="1">
+
+        <span>+</span>
+
+        <input id="n2" maxlength="1">
+
+        <span>+</span>
+
+        <input id="n3" maxlength="1">
+
+        <span>=</span>
+
+        <input id="soma2" maxlength="2">
+
+    </div>
+
+    <h3>378 é um número de Smith?</h3>
+
+    <label>
+        <input type="radio" name="smith378" value="Smith">
+        Smith
+    </label>
+
+    <label>
+        <input type="radio" name="smith378" value="Não Smith">
+        Não Smith
+    </label>
+
+    <br><br>
+
+<div class="botoes">
+
+    <button id="botaoVerificar378" onclick="corrigir378()">
+        Verificar
+    </button>
+
+    <button id="botaoProximo378"
+            onclick="proximo378()"
+            disabled>
+        Próximo número
+    </button>
+
+</div>
+
+    <div id="resultado378"></div>
+
+</div>
+
+<div class="card-exercicio oculto" id="card198">
+
+    <h2>Número 198</h2>
+
+    <h3>198 =</h3>
+
+    <div class="linha">
+
+        <input id="f198_1" maxlength="2">
+
+        <span>×</span>
+
+        <input id="f198_2" maxlength="2">
+
+        <span>×</span>
+
+        <input id="f198_3" maxlength="2">
+
+        <span>×</span>
+
+        <input id="f198_4" maxlength="2">
+
+    </div>
+
+    <h3>Soma dos algarismos dos fatores</h3>
+
+    <div class="linha">
+
+        <input id="d198_1" maxlength="1">
+
+        <span>+</span>
+
+        <input id="d198_2" maxlength="1">
+
+        <span>+</span>
+
+        <input id="d198_3" maxlength="1">
+
+        <span>+</span>
+
+        <input id="d198_4" maxlength="1">
+
+        <span>+</span>
+
+        <input id="d198_5" maxlength="1">
+
+        <span>=</span>
+
+        <input id="s198_1" maxlength="2">
+
+    </div>
+
+    <h3>Soma dos algarismos do número</h3>
+
+    <div class="linha">
+
+        <input id="n198_1" maxlength="1">
+
+        <span>+</span>
+
+        <input id="n198_2" maxlength="1">
+
+        <span>+</span>
+
+        <input id="n198_3" maxlength="1">
+
+        <span>=</span>
+
+        <input id="s198_2" maxlength="2">
+
+    </div>
+
+    <h3>198 é um número de Smith?</h3>
+
+    <label>
+        <input type="radio" name="smith198" value="Smith">
+        Smith
+    </label>
+
+    <label>
+        <input type="radio" name="smith198" value="Não Smith">
+        Não Smith
+    </label>
+
+    <br><br>
+
+    <div class="botoes">
+
+        <button onclick="corrigir198()">
+            Verificar
+        </button>
+
+        <button id="botaoProximo198"
+                onclick="proximo198()"
+                disabled>
+            Próximo número
+        </button>
+
+    </div>
+
+    <div id="resultado198"></div>
+
+</div>
+
+<div class="card-exercicio oculto" id="card250">
+
+    <h2>Número 250</h2>
+
+    <h3>250 =</h3>
+
+    <div class="linha">
+
+        <input id="f250_1" maxlength="1">
+
+        <span>×</span>
+
+        <input id="f250_2" maxlength="1">
+
+        <span>×</span>
+
+        <input id="f250_3" maxlength="1">
+
+        <span>×</span>
+
+        <input id="f250_4" maxlength="1">
+
+    </div>
+
+    <h3>Soma dos algarismos dos fatores</h3>
+
+    <div class="linha">
+
+        <input id="d250_1" maxlength="1">
+
+        <span>+</span>
+
+        <input id="d250_2" maxlength="1">
+
+        <span>+</span>
+
+        <input id="d250_3" maxlength="1">
+
+        <span>+</span>
+
+        <input id="d250_4" maxlength="1">
+
+        <span>=</span>
+
+        <input id="s250_1" maxlength="2">
+
+    </div>
+
+    <h3>Soma dos algarismos do número</h3>
+
+    <div class="linha">
+
+        <input id="n250_1" maxlength="1">
+
+        <span>+</span>
+
+        <input id="n250_2" maxlength="1">
+
+        <span>+</span>
+
+        <input id="n250_3" maxlength="1">
+
+        <span>=</span>
+
+        <input id="s250_2" maxlength="2">
+
+    </div>
+
+    <h3>250 é um número de Smith?</h3>
+
+    <label>
+        <input type="radio" name="smith250" value="Smith">
+        Smith
+    </label>
+
+    <label>
+        <input type="radio" name="smith250" value="Não Smith">
+        Não Smith
+    </label>
+
+    <br><br>
+
+    <div class="botoes">
+
+        <button onclick="corrigir250()">
+            Verificar
+        </button>
+
+        <button id="botaoProximo250"
+                onclick="proximo250()"
+                disabled>
+            Próximo número
+        </button>
+
+    </div>
+
+    <div id="resultado250"></div>
+
+</div>
+
+<div class="card-exercicio oculto" id="card85">
+
+    <h2>Número 85</h2>
+
+    <h3>85 =</h3>
+
+    <div class="linha">
+
+        <input id="f85_1" maxlength="1">
+
+        <span>×</span>
+
+        <input id="f85_2" maxlength="2">
+
+    </div>
+
+    <h3>Soma dos algarismos dos fatores</h3>
+
+    <div class="linha">
+
+        <input id="d85_1" maxlength="1">
+
+        <span>+</span>
+
+        <input id="d85_2" maxlength="1">
+
+        <span>+</span>
+
+        <input id="d85_3" maxlength="1">
+
+        <span>=</span>
+
+        <input id="s85_1" maxlength="2">
+
+    </div>
+
+    <h3>Soma dos algarismos do número</h3>
+
+    <div class="linha">
+
+        <input id="n85_1" maxlength="1">
+
+        <span>+</span>
+
+        <input id="n85_2" maxlength="1">
+
+        <span>=</span>
+
+        <input id="s85_2" maxlength="2">
+
+    </div>
+
+    <h3>85 é um número de Smith?</h3>
+
+    <label>
+        <input type="radio" name="smith85" value="Smith">
+        Smith
+    </label>
+
+    <label>
+        <input type="radio" name="smith85" value="Não Smith">
+        Não Smith
+    </label>
+
+    <br><br>
+
+    <div class="botoes">
+
+        <button onclick="corrigir85()">
+            Verificar
+        </button>
+
+        <button id="botaoProximo85"
+                onclick="proximo85()"
+                disabled>
+            Finalizar
+        </button>
+
+    </div>
+
+    <div id="resultado85"></div>
+
+</div>
 
 </section>
 
-        <section id="basicos">
-            <h1>Exercícios Básicos</h1>
-        </section>
+<section id="conceitos">
 
-        <section id="conceitos">
-            <h1>Conceitos Fundamentais</h1>
-        </section>
+    <h1>Conceitos Fundamentais</h1>
+
+    <div class="caixa-conceito">
+
+        <p style="text-indent:0;">
+            DEFINIÇÃO: Um número de Smith é um número composto <strong>n</strong> tal que a soma dos seus algarismos na base decimal é igual à soma dos algarismos de todos os seus fatores primos, contados com multiplicidade.
+        </p>
+
+    </div>
+
+    <p>
+        Vamos denotar como s(m) a soma dos algarismos do número m e
+        s<sub>p</sub>(m) a soma dos algarismos de todos os fatores primos de m.
+        Por exemplo,
+    </p>
+
+    <p style="text-align:center; text-indent:0;">
+        58 = 2 × 29
+    </p>
+
+    <p style="text-align:center; text-indent:0;">
+        s(58) = 13 = 2 + (2 + 9) = s<sub>p</sub>(58).
+    </p>
+
+    <p>
+        Portanto, 58 é um número de Smith.
+    </p>
+
+    <p>
+        Diversos acadêmicos estudaram os números de Smith e encontraram algumas propriedades interessantes que servem de base para descoberta de novos números de Smith. Cito aqui duas de grande relevância.
+    </p>
+
+    <ul>
+
+        <li>
+            Para qualquer número inteiro positivo <strong>m</strong> tem-se
+            <strong>s(m) ≡ m (mod 9)</strong>.
+        </li>
+
+        <li>
+            Sejam <strong>m</strong> e <strong>n</strong> números inteiros positivos, então
+            <strong>s<sub>p</sub>(mn) = s<sub>p</sub>(m) + s<sub>p</sub>(n)</strong>.
+        </li>
+
+    </ul>
+
+    <p>
+        Ainda não há uma generalização dos números de Smith, ou seja, uma fórmula que nos permita encontrar qualquer um deles. Entretanto, desde o artigo de Wilansky várias proposições surgiram para encontrar números de Smith, como:
+    </p>
+
+    <ul>
+
+        <li>Seja <strong>p</strong> um número primo, com p &gt; 5 e s(p) = 5. Então 21p e 112p são números de Smith.</li>
+
+        <li>Seja <strong>n</strong> um número inteiro positivo tal que s(n) &gt; s<sub>p</sub>(n) e s(n) ≡ s<sub>p</sub>(n) (mod 7). Então 10<sup>k</sup>n é um número de Smith, onde k = (s(n) − s<sub>p</sub>(n))/7.</li>
+
+        <li>Seja <strong>p</strong> um número primo composto dos algarismos 0, 1, 2, 3 e s(p) = 13. Então 11.001p é um número de Smith.</li>
+
+        <li>Seja <strong>p</strong> um número primo composto dos algarismos 0, 1, 2, 3 e s(p) = 11. Então 101.001p é um número de Smith.</li>
+
+        <li>Seja <strong>p</strong> um número primo maior que 101 contendo apenas os algarismos 0, 1, 2, 3, 4 e s(p) = 7n + 2, com n ≥ 1. Então 10<sup>n</sup> × 11p e 10<sup>n</sup> × 101p são números de Smith.</li>
+
+        <li>Seja <strong>R<sub>m</sub></strong> um número primo. Então 3.304R<sub>m</sub>, com m ≥ 3, é um número de Smith.</li>
+
+        <li>Seja <strong>q</strong> um primo cujos algarismos são apenas 0 ou 1. Então existe um múltiplo de q que é um número de Smith.</li>
+
+        <li>Seja <strong>n</strong> um número primo. Então 2<sup>n</sup> é um número de Smith se, e somente se, s(2<sup>n</sup>) − s(n) = 2.</li>
+
+    </ul>
+
+    <p>
+        Quando Wilansky publicou o primeiro artigo sobre o tema, levantou o questionamento sobre a infinitude desse conjunto. Poucos anos depois, McDaniel conseguiu resultados que responderam positivamente a essa questão.
+    </p>
+
+</section>
 
         <section id="interativos">
             <h1>Exercícios Interativos</h1>
         </section>
 
-        <section id="compartilhe">
-            <h1>Compartilhe sua ideia</h1>
-        </section>
+<section id="compartilhe">
 
-        <section id="materiais">
-            <h1>Materiais Complementares</h1>
-        </section>
+    <h1>Compartilhe sua ideia</h1>
+
+        <p>
+            Ao longo deste material, você explorou padrões, analisou exemplos e compreendeu
+            propriedades desses números especiais. Talvez, durante esse processo, você tenha
+            encontrado uma nova regularidade, elaborado uma demonstração diferente,
+            identificado uma generalização ou levantado uma questão que ainda merece investigação.
+        </p>
+
+        <p>
+            Se desejar contribuir com o desenvolvimento deste tema, compartilhe suas ideias.
+            Serão muito bem-vindas novas conjecturas, demonstrações, generalizações,
+            exemplos interessantes ou sugestões.
+        </p>
+
+        <div class="email-box">
+
+            <h3>Envie sua contribuição para:</h3>
+            <a href="mailto:monikyno@gmail.com">
+                 monikyno@gmail.com
+            </a>
+
+        </div>
+
+        <p>
+            A Matemática é construída coletivamente. Cada nova observação tem o potencial de
+            ampliar nossa compreensão e inspirar futuras investigações.
+        </p>
+
+</section>
+
+<section id="materiais">
+
+<h1>Materiais Complementares</h1>
+
+<p>
+ Os materiais apresentados nesta seção permitem aprofundar o estudo dos números de Smith sob diferentes perspectivas. Foram selecionados recursos que abordam aspectos históricos, propriedades matemáticas, algoritmos e aplicações relacionadas a essa classe especial de números. 
+</p>
+
+<h2>Artigos científicos</h2>
+
+<div class="card-material">
+
+    <div>
+
+        <h3>Smith Numbers</h3>
+
+        <p>Albert Wilansky (1982)</p>
+
+    </div>
+
+    <a href="https://www.jstor.org/stable/3026531?searchText=smith%20number&searchUri=%2Faction%2FdoBasicSearch%3FQuery%3Dsmith%2Bnumber%26so%3Drel&ab_segments=0%2Fbasic_search_gsv2%2Fcontrol&refreqid=fastly-default%3Ab9711966338a40af87cd4534c2c7b526"
+       target="_blank">
+       Acessar →
+    </a>
+
+</div>
+
+<div class="card-material">
+
+    <div>
+
+        <h3>SMITH NUMBERS FROM PRIMES WITH SMALL DIGITS</h3>
+
+        <p>Patrick Costello</p>
+
+    </div>
+
+    <a href="https://projecteuclid.org/journalArticle/Download?urlId=10.35834%2Fmjms%2F1449161363"
+       target="_blank">
+       Acessar →
+    </a>
+
+</div>
+
+<div class="card-material">
+
+    <div>
+
+        <h3>Construction of Smith Numbers</h3>
+
+        <p>Sham Oltikar and Keith Wayland</p>
+
+    </div>
+
+    <a href="https://www.jstor.org/stable/2690265"
+       target="_blank">
+       Acessar →
+    </a>
+
+</div>
+
+<h2>Livro</h2>
+
+<div class="card-material">
+
+    <div>
+
+        <h3>Exploring the Beauty of Fascinating Numbers</h3>
+
+        <p>Shyam Sunder Gupta</p>
+
+    </div>
+    
+    <a href="https://www.amazon.com.br/Exploring-Beauty-Fascinating-Numbers-Sunder/dp/9819724643"
+       target="_blank">
+       Acessar →
+    </a>
+
+</div>
+
+<h2>Vídeos</h2>
+
+<div class="card-material">
+
+    <div>
+
+        <h3>Smith Numbers</h3>
+
+    </div>
+
+    <a href="https://www.youtube.com/watch?v=04sleAzyrCk&t=187s"
+       target="_blank">
+       Assistir →
+    </a>
+
+</div>
+
+<div class="card-material">
+
+    <div>
+
+        <h3>Smith Numbers: Some Questions</h3>
+
+    </div>
+
+    <a href="https://www.youtube.com/watch?v=oyFIhyLk0Tk"
+       target="_blank">
+       Assistir →
+    </a>
+
+</div>
+
+<div class="card-material">
+
+    <div>
+
+        <h3>Smith Number in Java (Program)</h3>
+
+    </div>
+
+    <a href="https://www.youtube.com/watch?v=kmAxqlTDpis"
+       target="_blank">
+       Assistir →
+    </a>
+
+</div>
+
+<h2>Sites</h2>
+
+<div class="card-material">
+
+    <div>
+
+        <h3>Prime Puzzles</h3>
+
+    </div>
+
+    <a href="https://www.primepuzzles.net/puzzles/puzz_108.htm"
+       target="_blank">
+       Abrir →
+    </a>
+
+</div>
+
+<div class="card-material">
+
+    <div>
+
+        <h3>PrimePages</h3>
+
+    </div>
+
+    <a href="https://t5k.org/glossary/page.php?sort=SmithNumber"
+       target="_blank">
+       Abrir →
+    </a>
+
+</div>
+
+<div class="card-material">
+
+    <div>
+
+        <h3>GeeksforGeeks</h3>
+
+    </div>
+
+    <a href="https://www.geeksforgeeks.org/dsa/smith-number/"
+       target="_blank">
+       Abrir →
+    </a>
+
+</div>
+
+</section>
+
+</section>
 
         <section id="referencias">
             <h1>Referências</h1>

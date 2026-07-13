@@ -309,3 +309,254 @@ button:hover{
     box-shadow:0 4px 12px rgba(0,0,0,.15);
 
 }
+.email-box{
+
+    background:#E3F2FD;
+
+    border-left:6px solid #1565C0;
+
+    padding:20px;
+
+    margin:30px 0;
+
+    border-radius:10px;
+
+}
+
+.email-box h3{
+
+    margin-bottom:10px;
+
+    color:#1565C0;
+
+}
+
+.email-box a{
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    color:#1565C0;
+
+    text-decoration:none;
+
+}
+
+.email-box a:hover{
+
+    text-decoration:underline;
+
+}
+.card-exercicio{
+
+    background:white;
+
+    margin-top:30px;
+
+    padding:30px;
+
+    border-radius:12px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+}
+
+.linha{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    margin:20px 0;
+
+}
+
+.linha input{
+
+    width:55px;
+
+    height:40px;
+
+    text-align:center;
+
+    font-size:18px;
+
+    border:2px solid #ccc;
+
+    border-radius:8px;
+
+}
+
+.correto{
+
+    border:2px solid #2E7D32 !important;
+
+    background:#E8F5E9;
+
+}
+
+.errado{
+
+    border:2px solid #C62828 !important;
+
+    background:#FFEBEE;
+
+}
+
+#resultado198{
+
+    margin-top:20px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+.oculto{
+
+    display:none;
+
+}
+.botoes{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:25px;
+
+}
+
+.botoes button:disabled{
+
+    opacity:.45;
+
+    cursor:not-allowed;
+
+}
+
+#inicio h1{
+
+    text-align:center;
+    font-size:52px;
+    margin-bottom:5px;
+
+}
+
+#inicio h2{
+
+    text-align:center;
+    color:#1E5DB8;
+    font-size:34px;
+    margin-bottom:40px;
+
+}
+
+#inicio p{
+
+    text-align:justify;
+    text-indent:2em;
+    line-height:1.8;
+    margin-bottom:18px;
+
+}
+
+main section p{
+
+    text-align: justify;
+    text-indent: 2em;
+    line-height: 1.8;
+    margin-bottom: 18px;
+
+}
+
+.card-material{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#f7f9fc;
+
+    border-left:5px solid #1E5DB8;
+
+    border-radius:10px;
+
+    padding:18px;
+
+    margin:18px 0;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+
+}
+
+.card-material h3{
+
+    margin:0 0 8px;
+
+    color:#1E5DB8;
+
+}
+
+.card-material p{
+
+    margin:0;
+
+    text-indent:0;
+
+    color:#555;
+
+}
+
+.card-material a{
+
+    text-decoration:none;
+
+    background:#1E5DB8;
+
+    color:white;
+
+    padding:10px 18px;
+
+    border-radius:8px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.card-material a:hover{
+
+    background:#144a97;
+
+}
+
+.caixa-conceito{
+
+    background:#F4F8FF;
+
+    border-left:6px solid #1E5DB8;
+
+    padding:20px;
+
+    border-radius:8px;
+
+    margin:25px 0;
+
+}
+
+.caixa-conceito h2{
+
+    margin-top:0;
+
+    color:#1E5DB8;
+
+}
