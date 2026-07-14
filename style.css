@@ -560,3 +560,168 @@ main section p{
     color:#1E5DB8;
 
 }
+
+#conceitos ul{
+
+    margin-left:40px;
+    margin-bottom:20px;
+
+}
+
+#conceitos li{
+
+    font-size:18px;      /* use o mesmo tamanho dos parágrafos */
+    line-height:1.8;
+    margin-bottom:10px;
+
+}
+
+/* ===========================
+   TABELA DOS NÚMEROS DE SMITH
+   =========================== */
+
+#tabelaSmith{
+
+    display:grid;
+
+    grid-template-columns:repeat(7,1fr);
+
+    gap:10px;
+
+    margin:30px 0;
+
+}
+
+#tabelaSmith button{
+
+    padding:15px;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#E8EEF8;
+
+    color:#1E5DB8;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+#tabelaSmith button:hover{
+
+    background:#1E5DB8;
+
+    color:white;
+
+}
+
+#tabelaSmith button.ativo{
+
+    background:#1E5DB8;
+
+    color:white;
+
+}
+
+#painelSmith{
+
+    margin-top:30px;
+
+    padding:25px;
+
+    background:#F4F8FF;
+
+    border-left:6px solid #1E5DB8;
+
+    border-radius:8px;
+
+    min-height:180px;
+
+}
+
+#painelSmith h3{
+
+    color:#1E5DB8;
+
+    margin:0 0 12px 0;
+
+}
+
+#painelSmith p{
+
+    margin:6px 0;
+
+    text-indent:0;
+
+    line-height:1.4;
+
+}
+.card-erro{
+
+    background:#F8F8F8;
+
+    padding:25px;
+
+    border-radius:10px;
+
+    margin:30px 0;
+
+}
+
+.linhaErro{
+
+    border:2px solid #DDD;
+
+    border-radius:8px;
+
+    padding:14px;
+
+    margin:12px 0;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.linhaErro:hover{
+
+    background:#EEF5FF;
+
+}
+
+.linhaCorreta{
+
+    background:#E8F5E9;
+
+    border:2px solid #2E7D32;
+
+}
+
+.linhaErrada{
+
+    background:#FFEBEE;
+
+    border:2px solid #C62828;
+
+}
+
+#interativos h2{
+
+    text-align:center;
+
+    margin-top:50px;
+
+    padding-top:30px;
+
+    border-top:2px solid #D9D9D9;
+
+}
+
