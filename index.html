@@ -21,8 +21,6 @@
 
         <a href="#historia">História dos Números de Smith</a>
 
-        <a href="#video">Vídeo</a>
-
         <a href="#basicos">Exercícios Básicos</a>
 
         <a href="#conceitos">Conceitos Fundamentais</a>
@@ -46,7 +44,7 @@
     <h2>Explorando relações e padrões numéricos</h2>
 
     <p>
-        Este caderno interativo foi desenvolvido como produto educacional da dissertação de mestrado do Programa de Mestrado Profissional em Matemática em Rede Nacional (PROFMAT), da Universidade Tecnológica Federal do Paraná (UTFPR), elaborada por Moniky Oliveira, sob a orientação do Prof. Dr. Ronie Peterson Dario.
+        Este caderno interativo foi desenvolvido como produto educacional da dissertação de mestrado do Programa de Mestrado Profissional em Matemática em Rede Nacional (PROFMAT), da Universidade Tecnológica Federal do Paraná (UTFPR), elaborado por Moniky Oliveira, sob a orientação do Prof. Dr. Ronie Peterson Dario.
     </p>
 
     <p>
@@ -67,7 +65,8 @@
 
     <h1>Investigação Inicial</h1>
 
-    <p>Observe o número <strong>666</strong> e sua fatoração em números primos.</p>
+    <p>Antes de conhecer a definição de um número de Smith, observe atentamente o número <strong>666</strong> e sua fatoração em números primos. Sem utilizar calculadora,
+    tente descobrir uma propriedade especial do número. Procure identificar relações e formular hipóteses a partir das informações apresentadas.</p>
 
     <table class="tabela">
         <tr>
@@ -81,9 +80,27 @@
         </tr>
     </table>
 
-    <p><strong>O que você percebe?</strong></p>
+    <p><strong>O que você percebe?</strong> Você consegue identificar alguma relação entre os algarismos do número 666 e os fatores primos?</p>
 
-    <p>Existe alguma relação entre os algarismos do número e dos fatores primos?</p>
+    <p></p>
+
+    <p>Sua hipótese também funciona para esses números?</p>
+
+    <table class="tabela">
+        <tr>
+            <th>Número</th>
+            <th>Fatoração</th>
+        </tr>
+
+        <tr>
+            <td>58</td>
+            <td>2 × 29</td>
+        </tr>
+        <tr>
+            <td>85</td>
+            <td>5 × 17</td>
+        </tr>
+    </table>
 
     <button id="btnResposta">
         Ver resposta
@@ -94,9 +111,9 @@
         <p><strong>A relação encontrada é que:</strong></p>
 
         <ul>
-            <li>A soma dos algarismos do número (6 + 6 + 6) é 18.</li>
+            <li>A soma dos algarismos do número (6 + 6 + 6) é 18. A soma dos algarismos de seus fatores primos (2 + 3 + 3 + 3 + 7) também é 18.</li>
 
-            <li>A soma dos algarismos de seus fatores primos (2 + 3 + 3 + 3 + 7) também é 18.</li>
+            <li>O mesmo ocorre com os números 58 e 85, cujas somas de ambos é 13.</li>
         </ul>
 
     </div>
@@ -125,14 +142,8 @@
             Harold Smith. Essa observação deu origem ao estudo dessa classe especial de números.
         </p>
 
-</section>
-
-<section id="video">
-
-    <h1>Vídeo</h1>
-
         <p>
-            Assista ao vídeo para conhecer a história dos Números de Smith e compreender como essa curiosa propriedade foi descoberta.
+            Assista ao vídeo a seguir, que apresenta uma entrevista com Albert Wilansky sobre a descoberta dos números de Smith (entrevista fictícia produzida com recursos de Inteligência Artificial).
         </p>
 
 <video controls class="video">
@@ -140,8 +151,6 @@
     <source src="videos/podcast.mp4" type="video/mp4">
 
     Seu navegador não suporta vídeos.
-
-</video>
 
 </section>
 
@@ -158,7 +167,7 @@
 
     <h2>Número 378</h2>
 
-    <h3></h3>
+    <h3>Fatoração em números primos</h3>
 
     <div class="linha">
 
@@ -565,9 +574,7 @@
     </div>
 
     <p>
-        Vamos denotar como s(m) a soma dos algarismos do número m e
-        s<sub>p</sub>(m) a soma dos algarismos de todos os fatores primos de m.
-        Por exemplo,
+        Vamos denotar como s(m) a soma dos algarismos do número m e s<sub>p</sub>(m) a soma dos algarismos de todos os fatores primos de m. Por exemplo,
     </p>
 
     <p style="text-align:center; text-indent:0;">
@@ -575,7 +582,7 @@
     </p>
 
     <p style="text-align:center; text-indent:0;">
-        s(58) = 13 = 2 + (2 + 9) = s<sub>p</sub>(58).
+        s(58) = 5 + 8 = 13 = 2 + (2 + 9) = s<sub>p</sub>(58).
     </p>
 
     <p>
@@ -662,7 +669,7 @@ Cada resolução abaixo contém exatamente um erro. Clique na linha que consider
 
 <div class="card-erro" id="erro378">
 
-<h2>Exercício 1 de 3</h2>
+<h3>Exercício 1 de 3</h3>
 
     <div class="linhaErro" onclick="verificarErro(this,false)">
         Número: 378
@@ -780,6 +787,22 @@ Cada resolução abaixo contém exatamente um erro. Clique na linha que consider
 
 </div>
 
+<h2>Números de Smith na sequência de Fibonacci</h2>
+
+<p>
+Clique em qualquer termo da sequência de Fibonacci para visualizar sua fatoração prima e verificar se ele é ou não um número de Smith.
+</p>
+
+<div id="listaFibonacci"></div>
+
+<div id="painelFib">
+
+    <p style="text-align:center;color:#666;">
+        Clique em uma linha da sequência.
+    </p>
+
+</div>
+
 </section>
 
 <section id="compartilhe">
@@ -822,125 +845,6 @@ Cada resolução abaixo contém exatamente um erro. Clique na linha que consider
 <p>
  Os materiais apresentados nesta seção permitem aprofundar o estudo dos números de Smith sob diferentes perspectivas. Foram selecionados recursos que abordam aspectos históricos, propriedades matemáticas, algoritmos e aplicações relacionadas a essa classe especial de números. 
 </p>
-
-<h2>Artigos científicos</h2>
-
-<div class="card-material">
-
-    <div>
-
-        <h3>Smith Numbers</h3>
-
-        <p>Albert Wilansky (1982)</p>
-
-    </div>
-
-    <a href="https://www.jstor.org/stable/3026531?searchText=smith%20number&searchUri=%2Faction%2FdoBasicSearch%3FQuery%3Dsmith%2Bnumber%26so%3Drel&ab_segments=0%2Fbasic_search_gsv2%2Fcontrol&refreqid=fastly-default%3Ab9711966338a40af87cd4534c2c7b526"
-       target="_blank">
-       Acessar →
-    </a>
-
-</div>
-
-<div class="card-material">
-
-    <div>
-
-        <h3>SMITH NUMBERS FROM PRIMES WITH SMALL DIGITS</h3>
-
-        <p>Patrick Costello</p>
-
-    </div>
-
-    <a href="https://projecteuclid.org/journalArticle/Download?urlId=10.35834%2Fmjms%2F1449161363"
-       target="_blank">
-       Acessar →
-    </a>
-
-</div>
-
-<div class="card-material">
-
-    <div>
-
-        <h3>Construction of Smith Numbers</h3>
-
-        <p>Sham Oltikar and Keith Wayland</p>
-
-    </div>
-
-    <a href="https://www.jstor.org/stable/2690265"
-       target="_blank">
-       Acessar →
-    </a>
-
-</div>
-
-<h2>Livro</h2>
-
-<div class="card-material">
-
-    <div>
-
-        <h3>Exploring the Beauty of Fascinating Numbers</h3>
-
-        <p>Shyam Sunder Gupta</p>
-
-    </div>
-    
-    <a href="https://www.amazon.com.br/Exploring-Beauty-Fascinating-Numbers-Sunder/dp/9819724643"
-       target="_blank">
-       Acessar →
-    </a>
-
-</div>
-
-<h2>Vídeos</h2>
-
-<div class="card-material">
-
-    <div>
-
-        <h3>Smith Numbers</h3>
-
-    </div>
-
-    <a href="https://www.youtube.com/watch?v=04sleAzyrCk&t=187s"
-       target="_blank">
-       Assistir →
-    </a>
-
-</div>
-
-<div class="card-material">
-
-    <div>
-
-        <h3>Smith Numbers: Some Questions</h3>
-
-    </div>
-
-    <a href="https://www.youtube.com/watch?v=oyFIhyLk0Tk"
-       target="_blank">
-       Assistir →
-    </a>
-
-</div>
-
-<div class="card-material">
-
-    <div>
-
-        <h3>Smith Number in Java (Program)</h3>
-
-    </div>
-
-    <a href="https://www.youtube.com/watch?v=kmAxqlTDpis"
-       target="_blank">
-       Assistir →
-    </a>
-
-</div>
 
 <h2>Sites</h2>
 
@@ -988,6 +892,52 @@ Cada resolução abaixo contém exatamente um erro. Clique na linha que consider
     </a>
 
 </div>
+<h2>Vídeos</h2>
+
+<div class="card-material">
+
+    <div>
+
+        <h3>Smith Numbers</h3>
+
+    </div>
+
+    <a href="https://www.youtube.com/watch?v=04sleAzyrCk&t=187s"
+       target="_blank">
+       Assistir →
+    </a>
+
+</div>
+
+<div class="card-material">
+
+    <div>
+
+        <h3>Smith Numbers: Some Questions</h3>
+
+    </div>
+
+    <a href="https://www.youtube.com/watch?v=oyFIhyLk0Tk"
+       target="_blank">
+       Assistir →
+    </a>
+
+</div>
+
+<div class="card-material">
+
+    <div>
+
+        <h3>Smith Number in Java (Program)</h3>
+
+    </div>
+
+    <a href="https://www.youtube.com/watch?v=kmAxqlTDpis"
+       target="_blank">
+       Assistir →
+    </a>
+
+</div>
 
 </section>
 
@@ -995,8 +945,19 @@ Cada resolução abaixo contém exatamente um erro. Clique na linha que consider
 
         <section id="referencias">
             <h1>Referências</h1>
-        </section>
 
+<p>COSTELLO, Patrick. A New Largest Smith Number The Fibonacci Quarterly 40 (4), 2002, 369–71. doi:10.1080/00150517.2002.12428641.</p>
+<p>COSTELLO, Patrick J. Smith Numbers From Primes with Small Digits Missouri Journal of Mathematical Sciences 27, 2015, 10-15.</p>
+<p>Gupta, S. S. Exploring the Beauty of Fascinating Numbers. 1rd edition, Springer, 2025.</p>
+<p>MCDANIEL, Wayne L. The Existence of Infinitely Many k-Smith Numbers The Fibonacci Quarterly, 25(1), 1987, pp. 76–80. doi:10.1080/00150517.1987.12429731</p>
+<p>OLTIKAR, Sham and Keith Wayland. Construction of Smith Numbers Mathematics Magazine 56, 1983, 36-37.</p>
+<p>WILANSKY, Albert. Smith Numbers The Two-Year College Matheatcs Journal, vol. 13, no. 1, 1982, pp. 21–21. JSTOR, doi:10.2307/3026531.</p>
+<p>WITNO, Amin. Another Simple Construction of Smith Numbers. Missouri Journal of Mathematical Sciences 22 (2010): 97-101. doi:10.35834/MJMS/1312233139</p>
+<p>YATES, Samuel. Special Sets of Smith Numbers Mathematics Magazine, vol. 59, no. 5, 1986, pp. 293–96. JSTOR, doi:10.2307/2689404.</p>
+
+</section>
+
+      
     </main>
 
 <script src="script.js"></script>

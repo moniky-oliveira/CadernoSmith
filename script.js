@@ -846,3 +846,370 @@ function finalizarErros(){
     alert("Parabéns! Você concluiu esta atividade.");
 
 }
+const fib=[
+
+{
+indice:1,
+expressao:"0 ",
+numero:0,
+fatoracao:"Não possui fatoração prima.",
+smith:"Não é número de Smith."
+},
+
+{
+indice:2,
+expressao:"1",
+numero:1,
+fatoracao:"Não possui fatoração prima.",
+smith:"Não é número de Smith."
+},
+
+{
+indice:3,
+expressao:"0 + 1 = 1",
+numero:1,
+fatoracao:"Não possui fatoração prima.",
+smith:"Não é número de Smith."
+},
+
+{
+indice:4,
+expressao:"1 + 1 = 2",
+numero:2,
+fatoracao:"2",
+smith:"Não é número de Smith."
+},
+
+{
+indice:5,
+expressao:"1 + 2 = 3",
+numero:3,
+fatoracao:"3",
+smith:"Não é número de Smith."
+},
+
+{
+indice:6,
+expressao:"2 + 3 = 5",
+numero:5,
+fatoracao:"5",
+smith:"Não é número de Smith."
+},
+
+{
+indice:7,
+expressao:"3 + 5 = 8",
+numero:8,
+fatoracao:"2 × 2 × 2",
+smith:"Não é número de Smith."
+},
+
+{
+indice:8,
+expressao:"5 + 8 = 13",
+numero:13,
+fatoracao:"13",
+smith:"Não é número de Smith."
+},
+
+{
+indice:9,
+expressao:"8 + 13 = 21",
+numero:21,
+fatoracao:"3 × 7",
+smith:"Não é número de Smith."
+},
+
+{
+indice:10,
+expressao:"13 + 21 = 34",
+numero:34,
+fatoracao:"2 × 17",
+smith:"Não é número de Smith."
+},
+
+{
+indice:11,
+expressao:"21 + 34 = 55",
+numero:55,
+fatoracao:"5 × 11",
+smith:"Não é número de Smith."
+},
+
+{
+indice:12,
+expressao:"34 + 55 = 89",
+numero:89,
+fatoracao:"89",
+smith:"Não é número de Smith."
+},
+
+{
+indice:13,
+expressao:"55 + 89 = 144",
+numero:144,
+fatoracao:"2 × 2 × 2 × 2 × 3 × 3",
+smith:"Não é número de Smith."
+},
+
+{
+indice:14,
+expressao:"89 + 144 = 233",
+numero:233,
+fatoracao:"233",
+smith:"Não é número de Smith."
+},
+
+{
+indice:15,
+expressao:"144 + 233 = 377",
+numero:377,
+fatoracao:"13 × 29",
+smith:"Não é número de Smith."
+},
+
+{
+indice:16,
+expressao:"233 + 377 = 610",
+numero:610,
+fatoracao:"2 × 5 × 61",
+smith:"Não é número de Smith."
+},
+
+{
+indice:17,
+expressao:"377 + 610 = 987",
+numero:987,
+fatoracao:"3 × 7 × 47",
+smith:"Não é número de Smith."
+},
+
+{
+indice:18,
+expressao:"987 + 1597 = 2584",
+numero:2584,
+fatoracao:"2 × 2 × 2 × 17 × 19",
+},
+
+{
+indice:19,
+expressao:"1597 + 2584 = 4181",
+numero:4181,
+fatoracao:"37 × 113",
+},
+
+{
+indice:20,
+expressao:"2584 + 4181 = 6765",
+numero:6765,
+fatoracao:"3 × 5 × 11 × 41",
+},
+
+{
+indice:21,
+expressao:"4181 + 6765 = 10946",
+numero:10946,
+fatoracao:"2 × 13 × 421",
+},
+
+{
+indice:22,
+expressao:"6765 + 10946 = 17711",
+numero:17711,
+fatoracao:"89 × 199",
+},
+
+{
+indice:23,
+expressao:"10946 + 17711 = 28657",
+numero:28657,
+fatoracao:"28657",
+},
+
+{
+indice:24,
+expressao:"17711 + 28657 = 46368",
+numero:46368,
+fatoracao:"2 × 2 × 2 × 2 × 2 × 3 × 3 × 7 × 23",
+},
+
+{
+indice:25,
+expressao:"28657 + 46368 = 75025",
+numero:75025,
+fatoracao:"5 × 5 × 3001",
+},
+
+{
+indice:26,
+expressao:"46368 + 75025 = 121393",
+numero:121393,
+fatoracao:"233 × 521",
+},
+
+{
+indice:27,
+expressao:"75025 + 121393 = 196418",
+numero:196418,
+fatoracao:"2 × 17 × 53 × 109",
+},
+
+{
+indice:28,
+expressao:"121393 + 196418 = 317811",
+numero:317811,
+fatoracao:"3 × 13 × 29 × 281",
+},
+
+{
+indice:29,
+expressao:"196418 + 317811 = 514229",
+numero:514229,
+fatoracao:"514229",
+},
+
+{
+indice:30,
+expressao:"317811 + 514229 = 832040",
+numero:832040,
+fatoracao:"2 × 2 × 2 × 5 × 11 × 31 × 61",
+},
+
+{
+indice:31,
+expressao:"514229 + 832040 = 1346269",
+numero:1346269,
+fatoracao:"557 × 2417",
+},
+
+{
+indice:32,
+expressao:"832040 + 1346269 = 2178309",
+numero:2178309,
+fatoracao:"3 × 7 × 47 × 2207",
+},
+
+{
+indice:33,
+expressao:"1346269 + 2178309 = 3524578",
+numero:3524578,
+fatoracao:"2 × 89 × 19801",
+},
+
+{
+indice:34,
+expressao:"2178309 + 3524578 = 5702887",
+numero:5702887,
+fatoracao:"1597 × 3571",
+},
+
+{
+indice:35,
+expressao:"3524578 + 5702887 = 9227465",
+numero:9227465,
+fatoracao:"5 × 13 × 141961",
+},
+
+{
+indice:36,
+expressao:"5702887 + 9227465 = 14930352",
+numero:14930352,
+fatoracao:"2 × 2 × 2 × 2 × 3 × 3 × 17 × 19 × 107",
+},
+
+{
+indice:37,
+expressao:"9227465 + 14930352 = 24157817",
+numero:24157817,
+fatoracao:"73 × 149 × 2221",
+},
+
+{
+indice:38,
+expressao:"14930352 + 24157817 = 39088169",
+numero:39088169,
+fatoracao:"37 × 113 × 9349",
+},
+
+{
+indice:39,
+expressao:"24157817 + 39088169 = 63245986",
+numero:63245986,
+fatoracao:"2 × 233 × 135721",
+},
+
+{
+indice:40,
+expressao:"39088169 + 63245986 = 102334155",
+numero:102334155,
+fatoracao:"3 × 5 × 7 × 11 × 41 × 2161",
+}
+
+];
+
+const cores=[
+"#fde2e2",
+"#ffe0c2",
+"#fff2bf",
+"#eef9bf",
+"#dff8d5",
+"#d7f3f7",
+"#d9e6ff",
+"#e5dbff",
+"#f6dcff",
+"#ffdede"
+];
+
+const lista=document.getElementById("listaFibonacci");
+
+const painel=document.getElementById("painelFib");
+
+if(lista){
+
+fib.forEach(item=>{
+
+const div=document.createElement("div");
+
+div.className="itemFib";
+
+div.style.background=cores[item.indice%cores.length];
+
+const larguraInicial = 180;
+const larguraFinal = 980;
+
+const largura =
+    larguraInicial +
+    ((larguraFinal - larguraInicial) * (item.indice - 1)) / (fib.length - 1);
+
+div.style.width = largura + "px";
+div.textContent=item.expressao;
+
+div.onclick=function(){
+
+document.querySelectorAll(".itemFib").forEach(x=>{
+
+x.classList.remove("itemSelecionado");
+
+});
+
+div.classList.add("itemSelecionado");
+
+painel.innerHTML=`
+
+<h3>Termo ${item.indice}</h3>
+
+<p><strong>Número:</strong> ${item.numero}</p>
+
+<p><strong>Fatoração prima:</strong> ${item.fatoracao}</p>
+
+<p><strong>Classificação:</strong> ${item.smith}</p>
+
+`;
+
+};
+
+lista.appendChild(div);
+
+});
+
+}
