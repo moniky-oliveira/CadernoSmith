@@ -1425,7 +1425,7 @@ function posicionarNumeros() {
 
             elemento.dataset.numero =
                 numero;
-
+            elemento.dataset.indice = indice;
 
             /*
              * Mantém os números acompanhando
@@ -1526,11 +1526,23 @@ function ajustarEspiralCelular() {
     const centroY = 280;
 
 
-    /*
-     * Limpa os números atuais.
-     */
+/*
+ * Guarda os índices dos números eliminados
+ * antes de recriar a espiral.
+ */
 
-    area.innerHTML = "";
+const numerosEliminados = new Set(
+    Array.from(
+        area.querySelectorAll(".numero-fibonacci.eliminado")
+    ).map(elemento => elemento.dataset.indice)
+);
+
+
+/*
+ * Limpa os números atuais.
+ */
+
+area.innerHTML = "";
 
 
     /*
@@ -1549,7 +1561,20 @@ function ajustarEspiralCelular() {
             numero;
 
         elemento.dataset.numero =
-            numero;
+    numero;
+
+elemento.dataset.indice =
+    indice;
+
+
+/*
+ * Restaura a eliminação dos números
+ * que já haviam sido selecionados.
+ */
+
+if (numerosEliminados.has(String(indice))) {
+    elemento.classList.add("eliminado");
+}
 
 
         /*
