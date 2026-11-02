@@ -722,124 +722,126 @@ tabela.appendChild(botao);
 
 }
 
-function verificarErro(linha, erro){
 
-    const resultado = linha.parentElement.querySelector("p[id^='resultadoErro']");
+// =====================================
+// DESCOBRIR O ERRO — FUNÇÃO GERAL
+// =====================================
 
-    if(erro){
+function marcarErro(linha, erro, cardId, resultadoId, botaoId, explicacao) {
 
+    const card = document.getElementById(cardId);
+    const resultado = document.getElementById(resultadoId);
+
+    // Evita selecionar novamente uma linha já marcada
+    if (linha.classList.contains("linhaCorreta") ||
+        linha.classList.contains("linhaErrada") ||
+        card.dataset.concluido === "true") {
+        return;
+    }
+
+    if (erro) {
+
+        // O aluno identificou a linha incorreta: ACERTO
+        linha.classList.add("linhaCorreta");
+
+        resultado.innerHTML =
+            "<strong style='color:#2E7D32;'>" + explicacao + "</strong>";
+
+        // Bloqueia as linhas após o acerto
+        card.querySelectorAll(".linhaErro").forEach(item => {
+            item.style.pointerEvents = "none";
+        });
+
+        card.dataset.concluido = "true";
+
+        // Libera o próximo exercício
+        document.getElementById(botaoId).disabled = false;
+
+    } else {
+
+        // O aluno selecionou uma linha correta: ERRO
         linha.classList.add("linhaErrada");
 
         resultado.innerHTML =
-        "<strong style='color:#C62828;'>O erro está na fatoração. Um número de Smith deve ser fatorado exclusivamente em números primos. A fatoração correta é: 2 × 3 × 3 × 3 × 7.</strong> ";
-
-        linha.parentElement.querySelectorAll(".linhaErro").forEach(item=>{
-
-            item.style.pointerEvents="none";
-
-        });
-
-    document.getElementById("botaoErro1").disabled = false;
-
-    }else{
-
-        if(!linha.classList.contains("linhaCorreta")){
-
-            linha.classList.add("linhaCorreta");
-
-        }
-
-        resultado.innerHTML =
-        "<strong style='color:#2E7D32;'>O erro inicial não está aqui!</strong>";
-
+            "<strong style='color:#C62828;'>Essa linha não contém o erro inicial. Tente identificar outra linha!</strong>";
     }
+}
+
+// =====================================
+// EXERCÍCIO 1 — NÚMERO 378
+// =====================================
+
+function verificarErro(linha, erro) {
+
+    marcarErro(
+        linha,
+        erro,
+        "erro378",
+        "resultadoErro1",
+        "botaoErro1",
+        "Muito bem! Você identificou o erro. A fatoração apresentada ainda contém fatores que não são primos. A fatoração correta é: 2 × 3 × 3 × 3 × 7."
+    );
 
 }
-function verificarErro22(linha, erro){
 
-    const card = document.getElementById("erro22");
+// =====================================
+// EXERCÍCIO 2 — NÚMERO 22
+// =====================================
 
-    const resultado = document.getElementById("resultadoErro22");
+function verificarErro22(linha, erro) {
 
-    if(erro){
-
-        linha.classList.add("linhaErrada");
-
-        resultado.innerHTML =
-        "<strong style='color:#C62828;'>O erro está na soma dos algarismos dos fatores. O número 11 deve ser separado em seus algarismos:2 + 1 + 1 = 4.</strong> ";
-
-        card.querySelectorAll(".linhaErro").forEach(item=>{
-
-            item.style.pointerEvents="none";
-
-        });
-
-        document.getElementById("botaoErro22").disabled = false;
-
-    }else{
-
-        if(!linha.classList.contains("linhaCorreta")){
-
-            linha.classList.add("linhaCorreta");
-
-        }
-
-        resultado.innerHTML =
-        "<strong style='color:#2E7D32;'>O erro inicial não está aqui!</strong>";
-
-    }
+    marcarErro(
+        linha,
+        erro,
+        "erro22",
+        "resultadoErro22",
+        "botaoErro22",
+        "Muito bem! Você identificou o erro. Para calcular a soma, devemos somar os algarismos de cada fator primo, e não os fatores inteiros: 2 + 1 + 1 = 4."
+    );
 
 }
-function proximoErro22(){
+
+// =====================================
+// EXERCÍCIO 3 — NÚMERO 13
+// =====================================
+
+function verificarErro13(linha, erro) {
+
+    marcarErro(
+        linha,
+        erro,
+        "erro13",
+        "resultadoErro13",
+        "botaoErro13",
+        "Muito bem! Você identificou o erro. Os números de Smith devem ser compostos. Como 13 é primo, não pode ser um número de Smith."
+    );
+
+}
+
+// =====================================
+// NAVEGAÇÃO ENTRE OS EXERCÍCIOS
+// =====================================
+
+function proximoErro1() {
+
+    document.getElementById("erro378").classList.add("oculto");
+    document.getElementById("erro22").classList.remove("oculto");
+
+}
+
+function proximoErro22() {
 
     document.getElementById("erro22").classList.add("oculto");
-
     document.getElementById("erro13").classList.remove("oculto");
 
 }
 
-function proximoErro1(){
+function finalizarErros() {
 
-    document.getElementById("erro378").classList.add("oculto");
-
-    document.getElementById("erro22").classList.remove("oculto");
+    alert("Parabéns! Você concluiu esta atividade.");
 
 }
-function verificarErro13(linha, erro){
 
-    const card = document.getElementById("erro13");
-
-    const resultado = document.getElementById("resultadoErro13");
-
-    if(erro){
-
-        linha.classList.add("linhaErrada");
-
-        resultado.innerHTML =
-        "<strong style='color:#C62828;'>Os números de Smith são, por definição, números compostos. Como 13 é primo, ele não possui fatoração prima distinta dele mesmo e não pode ser um número de Smith.</strong> ";
-
-        card.querySelectorAll(".linhaErro").forEach(item=>{
-
-            item.style.pointerEvents="none";
-
-        });
-
-        document.getElementById("botaoErro13").disabled = false;
-
-    }else{
-
-        if(!linha.classList.contains("linhaCorreta")){
-
-            linha.classList.add("linhaCorreta");
-
-        }
-
-        resultado.innerHTML =
-        "<strong style='color:#2E7D32;'>O erro inicial não está aqui!</strong>";
-
-    }
-
-}
 
 function finalizarErros(){
 
@@ -1770,7 +1772,7 @@ if (btnEliminar) {
             } else {
 
                 btnEliminar.textContent =
-                    "Selecionar números para eliminar";
+                    "Eliminar";
 
 
                 instrucao.textContent =

@@ -14,7 +14,9 @@ body{
     background:#f5f5f5;
 }
 
-/* MENU */
+/* =====================================================
+    MENU
+===================================================== */
 
 aside{
 
@@ -64,7 +66,9 @@ aside a:hover{
 
 }
 
-/* CONTEÚDO */
+/* =====================================================
+    CONTEÚDO
+===================================================== */
 
 main{
 
@@ -348,6 +352,9 @@ button:hover{
     text-decoration:underline;
 
 }
+/* =====================================================
+    Aplicando os conceitos
+===================================================== */
 .card-exercicio{
 
     background:white;
@@ -663,6 +670,11 @@ main section p{
     line-height:1.4;
 
 }
+
+/* =====================================================
+    Descubra o erro
+===================================================== */
+
 .card-erro{
 
     background:#F8F8F8;
@@ -699,17 +711,17 @@ main section p{
 
 .linhaCorreta{
 
-    background:#E8F5E9;
-
-    border:2px solid #2E7D32;
+    background: #E8F5E9 !important;
+    border: 2px solid #2E7D32 !important;
+    color: #1B5E20;
 
 }
 
 .linhaErrada{
 
-    background:#FFEBEE;
-
-    border:2px solid #C62828;
+    background: #FFEBEE !important;
+    border: 2px solid #C62828 !important;
+    color: #B71C1C;
 
 }
 
@@ -724,6 +736,10 @@ main section p{
     border-top:2px solid #D9D9D9;
 
 }
+
+/* =====================================================
+    Fibonacci
+===================================================== */
 
 #listaFibonacci{
 
